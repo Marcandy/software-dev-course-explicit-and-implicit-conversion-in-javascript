@@ -19,14 +19,27 @@ Use console.log() to clearly show the before-and-after type conversions.
 */
 
 
-let result = "5" - 2;
+let result = Number("5") - 2; // turning the string "5" into an actual number
 console.log("The result is: " + result);
 
-let isValid = Boolean("false");
+let isValid = Boolean("false");//it turn to true any value string, except ""
 if (isValid) {
     console.log("This is valid!");
 }
 
-let age = "25";
+let age = Number("25");
 let totalAge = age + 5;
 console.log("Total Age: " + totalAge);
+
+
+let score = 10;   // number
+let scoreMessage = "Your score is: " + score// score is implicit converted to string
+console.log(scoreMessage); // string
+
+
+let priceText = "19.99"; // string
+let price = Number(priceText); // <-- explicit conversion
+console.log(priceText)
+
+let edgeCase = Number(null); // it turns to 0
+console.log(edgeCase)
